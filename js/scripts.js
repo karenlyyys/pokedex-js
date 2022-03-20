@@ -1,5 +1,4 @@
 let pokemonList = [{
-
         name: 'Eevee',
         height: 0.3,
         type: ['normal']
@@ -15,3 +14,4 @@ let pokemonList = [{
         name: 'Cubone',
         height: 0.4,
         type: ['ground']
+}];
