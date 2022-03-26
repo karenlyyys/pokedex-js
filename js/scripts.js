@@ -6,27 +6,27 @@ let pokemonList = [{
 },
 
 {
-  name: 'Jigglypuff',
-  height: 0.5,
-  type: ['fairy', 'normal']
-},
-
-{
   name: 'Cubone',
   height: 0.4,
   type: ['ground']
+},
+
+{
+  name: 'Jigglypuff',
+  height: 0.5,
+  type: ['fairy', 'normal']
 }];
+
+console.log(pokemonList);
 
 // Loop to list all the pokemons on the page
 for (let i = 0; i < pokemonList.length; i++) {
   document.write("name: " + pokemonList[i].name);
-  document.write("(Height: " + pokemonList[i].height + ".");
+  document.write("height: " + pokemonList[i].height + ".");
 	document.write("type: " + pokemonList[i].type[0]);
 }
 // Conditional text if Pokemon size is over 0.4
-	document.write(".)");
-	if (pokemonList[i].height > 0.4) {
+for (let i = 0; i < pokemonList.length; i++) 
+if (pokemonList[i].height > 0.4) {
 	document.write("<span class=big_pokemon> - Wow, that's big!</span>");
-	}
-	document.write("<br>");
 }
