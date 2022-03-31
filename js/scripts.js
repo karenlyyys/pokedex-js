@@ -1,5 +1,6 @@
 // Listing pokemons and their features
-let pokemonList = [{
+let pokemonRepository = (function () {
+  let pokemonList = [{
   name: 'Eevee',
   height: 0.3,
   type: ['normal']
@@ -17,16 +18,24 @@ let pokemonList = [{
   type: ['fairy', 'normal']
 }];
 
-console.log(pokemonList);
+  //add new pokemon to the list
+    function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
 
-// Loop to list all the pokemons on the page
-for (let i = 0; i < pokemonList.length; i++) {
-  "<p>" + document.write("name: " + pokemonList[i].name + "</p>")
-  "<p>" + document.write("height: " + pokemonList[i].height + "</p>")
-	"<p>" + document.write("type: " + pokemonList[i].type[0] + "</p>");
-}
-// Conditional text if Pokemon size is over 0.4
-for (let i = 0; i < pokemonList.length; i++)
-if (pokemonList[i].height > 0.4) {
-	document.write("<span class=big_pokemon> - Wow, that's big!</span>");
-}
+//return pokemon list
+  function getAll() {
+    return pokemonList;
+  }
+
+  //return all pokemon
+  return {
+    add: add,
+    getAll: getAll
+  };
+})();
+
+// forEach loop to list all the pokemons on the page
+pokemonRepository.getAll().forEach (function(pokemon) {
+	pokemonRepository.addListItem(pokemon);
+});
