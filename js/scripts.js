@@ -19,7 +19,7 @@ let pokemonRepository = (function () {
 }];
 
   //add new pokemon to the list
-    function add(pokemon) {
+  function add(pokemon) {
     pokemonList.push(pokemon);
   }
 
@@ -37,5 +37,6 @@ let pokemonRepository = (function () {
 
 // forEach loop to list all the pokemons on the page
 pokemonRepository.getAll().forEach (function(pokemon) {
-	pokemonRepository.addListItem(pokemon);
+	document.write("<p>Name:"+pokemon.name+"</p>" + "<p>Height:"+pokemon.height+"</p>" +
+                "<p>Type:"+pokemon.type+"</p>");
 });
