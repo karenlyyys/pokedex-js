@@ -29,11 +29,15 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
+
   function addListItem(pokemon){
-  let pokemonList = document.queryselector(".pokemon-list");
-  let listpokemon = document.createElement(li);
+  let pokemonList = document.querySelector(".pokemon-list");
+  let listpokemon = document.createElement("li");
   let button = document.createElement("button");
   button.innerText = pokemon.name;
+  button.addEventListener('click', function (event) {
+    console.log(pokemon.name);
+  });
   button.classList.add("button-class");
   listpokemon.appendChild(button);
   pokemonList.appendChild(listpokemon);
@@ -41,9 +45,11 @@ let pokemonRepository = (function () {
   //return all pokemon 
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
+
 
 // forEach loop to list all the pokemons on the page
 pokemonRepository.getAll().forEach (function (pokemon) {
@@ -51,6 +57,7 @@ pokemonRepository.getAll().forEach (function (pokemon) {
   pokemonRepository.addListItem(pokemon);
 
   console.log(pokemonRepository.getAll());
+ 
 });
                                     
-                    
+      
