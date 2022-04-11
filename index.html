@@ -2,20 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <title>Pokedex JS</title>
-    <link href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width">
+    <title>Pokedex-js</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id='show-modal'>Show model</button>
-    <button id='show-dialog'>Show dialog</button>
-    <div id='modal-container'></div>
-    <h1>Modal title</h1>
-    <p>Modal text</p>
-    <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch-polyfill.js"></script>
+      <h1>List of Pokemons</h1>
+      <ul class="pokemon-list"></ul>
+       <div id='modal-container'>
+       </div>
+    <script src = "js/modal.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
