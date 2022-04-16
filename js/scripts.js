@@ -1,3 +1,4 @@
+
 //wrapping the code in an IIFE
 
 let pokemonRepository = (function () {
@@ -73,8 +74,4 @@ let pokemonRepository = (function () {
   
   
   pokemonRepository.main();
-  
-  
-  
-  
   
