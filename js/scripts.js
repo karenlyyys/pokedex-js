@@ -26,11 +26,11 @@ let pokemonRepository = (function () {
           .then(response=>{
             console.log(response)
             console.log(response.sprites.back_shiny)
+            
+            let pokemonDetails = `Height: ${response.height} \n Types: ${response.types.map(x=>x.type.name)}`
+
   
-             let pokemonDetails = `Height: ${response.height}`
-         
-  
-          modal.showModal(`${pokemon.name}`, `${pokemonDetails}`, `${response.sprites.back_shiny}`);
+            modal.showModal(`${pokemon.name}`, `${pokemonDetails}`, `${response.sprites.back_shiny}`);
   
   
           })
