@@ -7,7 +7,7 @@ User Information
 
 The user views Pokemon information by selecting a Pokemon by name. A modal containing the image, height and type of Pokemon will pop up. The user can close the modal by by clicking the "x" button. 
 
-How to run
+How to Run
 
 Open html from gh-pages
 
